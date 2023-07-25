@@ -1,0 +1,20 @@
+<html>
+    <script src="file.js">
+        ....//externel
+    </script>
+    <script>
+        ....//internel
+    </script>
+    <!--Inline Javascript, directly add Javascript to an HTML element-->
+    
+
+<!--You can load multiple external JS scripts. But if they try to define the same global 
+function, the last one will replace the one defined by the earlier function -- 
+there can only be one function with a given name.-->
+    <script>
+        var loaded = false;
+    </script>
+ 
+    <script src="file.js" onload="alert('Script loaded!'); loaded=true;">
+    </script>
+</html>
